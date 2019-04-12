@@ -1,0 +1,7 @@
+.hello {
+  color: #333;
+  background-image: url('./imgs/1.svg');
+  background-repeat: no-repeat;
+  padding-left: 50px;
+  background-size: 50px 50px
+}
