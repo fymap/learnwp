@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env", {
+        "modules": false,
+        "debug": true,
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "targets": {
+          // "browsers": ["> 1%", "last 2 versions", "ie 10"]
+          // "browsers": ["chrome 70"]
+          "browsers": ["Android 4.2", "ios 11"]
+        }
+      }
+    ]
+  ],
+  "plugins": ["@babel/plugin-syntax-dynamic-import"]
+}

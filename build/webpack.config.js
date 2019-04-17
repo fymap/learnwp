@@ -14,11 +14,11 @@ module.exports = {
   },
   output: {
     filename: '[name].[contenthash].js',
-    chunkFilename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].bundle.js',
     path: path.join(__dirname, 'dist')
   },
   module: {
-    rules: [      
+    rules: [
       {
         test: /\.(s)?css$/,
         use: [{

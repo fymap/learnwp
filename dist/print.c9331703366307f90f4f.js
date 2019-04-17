@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{10:function(n,e,o){"use strict";function t(n){console.log("call from print.js!!");var e=document.createElement("p");e.innerHTML=n,e.classList.add("hello"),document.body.appendChild(e)}o.r(e),o.d(e,"printMe",function(){return t})}}]);
-//# sourceMappingURL=print.c9331703366307f90f4f.js.map
