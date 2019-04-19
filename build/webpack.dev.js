@@ -7,7 +7,6 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: 'dist',
     hot: true,
     // clientLogLevel: 'warning',
     inline: true,
@@ -22,8 +21,7 @@ module.exports = merge(common, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html'
+      template: './src/index.html'
     })
   ]
 })
