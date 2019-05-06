@@ -13,6 +13,7 @@ module.exports = merge(common, {
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, '../dist'),
+    // 只要不改动公共库的代码，就可以保证其哈希值不受影响
     filename: '[name].[chunkhash:8].js',
     chunkFilename: '[name].[chunkhash:8].js'
     // filename: '[name].[contenthash].js',
@@ -49,12 +50,12 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
+      // 避免js模块发生了改变，导致css文件会重复构建
       filename: '[name].[contenthash:8].css',
       chunkFilename: '[id].[contenthash:8].css'
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
+      template: './src/index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,

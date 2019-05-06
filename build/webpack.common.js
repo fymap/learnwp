@@ -44,7 +44,13 @@ module.exports = {
           loader: 'file-loader',
           options: {
             limit: 10000,
-            name: 'imgs/[name].[hash:7].[ext]'
+            outputPath: 'imgs',
+            name() {
+              if (dev) {
+                return '[name].[ext]'
+              }
+              return '[name].[hash:7].[ext]' 
+            } 
           }
         }]
       }
